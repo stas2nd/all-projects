@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    &:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+body  {
+    margin: 0;
+
+    &.no-scroll {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+img {
+    display: block;
+}
+
+button {
+    border: none;
+}

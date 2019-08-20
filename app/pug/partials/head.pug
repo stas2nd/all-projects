@@ -1,0 +1,53 @@
+head    
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    title Projects
+    meta(content="", name="description")
+    meta(content="", name="keywords")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(content="telephone=no", name="format-detection")
+    meta(name="HandheldFriendly", content="true")
+    link(href="css/bootstrap.min.css" rel="stylesheet" type="text/css")
+    link(href="css/swiper_4.4.1.min.css" rel="stylesheet" type="text/css")
+    link(href="css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css")
+    |<!--[if (gt IE 9)|!(IE)]><!--><link href="css/main.min.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+    
+    meta(property="og:title", content="")
+    meta(property="og:title", content="")
+    meta(property="og:url", content="")
+    meta(property="og:description", content="")
+    meta(property="og:image", content="")
+    meta(property="og:image:type", content="image/jpeg")
+    meta(property="og:image:width", content="500")
+    meta(property="og:image:height", content="300")
+    meta(property="twitter:description", content="")
+    link(rel="image_src", href="")
+
+    link(rel="icon" type="image/x-icon" href="")
+
+    script.
+        var checkMobile = function() {
+            var windowWidth = screen.width;
+            if (windowWidth < 375) {
+                var oldMeta = document.querySelector('meta[name="viewport"]');
+                oldMeta.remove();
+                var meta = document.createElement('meta');
+                meta.name = "viewport";
+                meta.content = "width=375, user-scalable=no";
+                document.querySelector('head').appendChild(meta);
+            } else if (windowWidth >= 375) {
+                var oldMeta = document.querySelector('meta[name="viewport"]');
+                oldMeta.remove();
+                var meta = document.createElement('meta');
+                meta.name = "viewport";
+                meta.content = "width=device-width, initial-scale=1.0";
+                document.querySelector('head').appendChild(meta);
+            }
+        };
+        checkMobile();
+        window.addEventListener("resize", function() {
+            checkMobile();
+        }, false);
+    script.
+        (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+    |<!--[if lt IE 9 ]><script src="%=static=%js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->

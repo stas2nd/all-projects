@@ -109,6 +109,9 @@ gulp.task('build', ['clean', 'html', 'compress', 'min-css', 'min-js'], function(
     gulp.src('app/js/pages/*.json')
     .pipe(gulp.dest('build/js'));
 
+    gulp.src('app/img/*.ico')
+    .pipe(gulp.dest('build'));
+
 });
 
 gulp.task('default', ['build', 'watch']);
